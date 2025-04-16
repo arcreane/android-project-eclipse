@@ -5,9 +5,25 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="24dp"
+    android:background="#FFF9F9">
 
-    <!-- 📚 View Health Articles Button -->
+    <!-- 👋 Welcome Message -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="👋 Welcome back!"
+        android:textSize="18sp"
+        android:textColor="#6A1B9A"
+        android:layout_marginBottom="24dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 📚 View Health Articles -->
     <Button
         android:id="@+id/btnViewArticles"
         android:layout_width="0dp"
@@ -15,13 +31,12 @@
         android:text="📚 View Health Articles"
         android:textColor="#FFFFFF"
         android:backgroundTint="#B39DDB"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="64dp"
-        android:layout_marginHorizontal="32dp" />
+        android:layout_marginTop="16dp" />
 
-    <!-- 🔮 Start Cycle Button -->
+    <!-- 🔮 Predict Period -->
     <Button
         android:id="@+id/btnStartCycle"
         android:layout_width="0dp"
@@ -32,7 +47,45 @@
         app:layout_constraintTop_toBottomOf="@+id/btnViewArticles"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginHorizontal="32dp" />
+        android:layout_marginTop="16dp" />
+
+    <!-- 💬 Daily Quote -->
+    <Button
+        android:id="@+id/btnDailyQuote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="💬 Daily Quote"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#80CBC4"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartCycle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- 👤 User Profile -->
+    <Button
+        android:id="@+id/btnUserProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="👤 User Profile"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#9575CD"
+        app:layout_constraintTop_toBottomOf="@+id/btnDailyQuote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- 🔔 Reminders -->
+    <Button
+        android:id="@+id/btnReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🔔 Reminders"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4DB6AC"
+        app:layout_constraintTop_toBottomOf="@+id/btnUserProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

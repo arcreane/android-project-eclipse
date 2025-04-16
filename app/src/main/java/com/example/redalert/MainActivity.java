@@ -19,10 +19,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 🔮 Go to Start Cycle
+        // 🔮 Start Cycle Prediction
         Button btnStartCycle = findViewById(R.id.btnStartCycle);
         btnStartCycle.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, StartCycleActivity.class);
+            startActivity(intent);
+        });
+
+        // 👤 User Profile
+        Button btnUserProfile = findViewById(R.id.btnUserProfile);
+        btnUserProfile.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
             startActivity(intent);
         });
     }
