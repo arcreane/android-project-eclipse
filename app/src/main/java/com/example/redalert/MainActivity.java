@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
 
-        // 🔐 Redirect to Login if user is not logged in
         if (user == null) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
             finish();
@@ -61,10 +60,15 @@ public class MainActivity extends AppCompatActivity {
             finish();
         });
 
-        // 🗓️ Cycle Calendar
         Button btnCalendar = findViewById(R.id.btnCalendar);
         btnCalendar.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, CycleCalendarActivity.class));
+        });
+
+        // 🧠 Mood & Symptom Tracker
+        Button btnMoodSymptom = findViewById(R.id.btnMoodSymptom);
+        btnMoodSymptom.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, MoodSymptomActivity.class));
         });
     }
 }
